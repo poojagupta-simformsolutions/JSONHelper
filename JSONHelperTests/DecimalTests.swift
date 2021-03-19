@@ -23,7 +23,7 @@ class DecimalTests: XCTestCase {
 
   func testIntConversion() {
     value <-- (testInt as Any)
-    XCTAssertEqual(Int(NSDecimalNumber(decimal: value)), testInt)
+    XCTAssertEqual(Int(truncating: NSDecimalNumber(decimal: value)), testInt)
   }
 
   func testFloatConversion() {
